@@ -35,7 +35,7 @@ function viewCart() {
       return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}, and ${cart[1].itemName} at $${cart[1].itemPrice}.`
     }else{
       let lastItem = array.pop();
-      return `In your cart, you have ${array.join(', ')}, and ${lastItem}.`
+      return `In your cart, you have ${array}, and ${lastItem}.`
     }
 }
 
