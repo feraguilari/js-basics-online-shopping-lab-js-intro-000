@@ -20,20 +20,20 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  var list = [];
-    for ( var i = 0; i < list.length; i++) {
-        list.push(`${cart[i].itemName} at $${cart[i].itemPrice}`)
-    }
-    if (cart.length === 0) {
-      return `Your shopping cart is empty.`;
-    }
-    if (cart.length === 1){
-      return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`;
-    }
-    else{
-      var last = list.pop();
-      return `In your cart, you have ${list.join(", ")}, and ${last}.`
-    }
+  var array = [];
+  for ( let i = 0; i < cart.length; i++) {
+      array.push(`${cart[i].itemName} at $${cart[i].itemPrice}`)
+  }
+  if (cart.length === 0) {
+    return `Your shopping cart is empty.`;
+  }
+  if (cart.length === 1){
+    return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`;
+  }
+  else{
+    let lastItem = array.pop();
+    return `In your cart, you have ${array.join(', ')}, and ${lastItem}.`
+  }
 }
 
 function total() {
