@@ -21,7 +21,7 @@ function addToCart(item) {
 
 function viewCart() {
   var list = [];
-  for ( let i = 0; i < cart.length; i++) {
+  for ( var i = 0; i < cart.length; i++) {
       list.push(`${cart[i].itemName} at $${cart[i].itemPrice}`)
   }
   if (cart.length === 0) {
@@ -31,7 +31,7 @@ function viewCart() {
     return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`;
   }
   else{
-    let last = list.pop();
+    var last = list.pop();
     return `In your cart, you have ${list.join(', ')}, and ${last}.`
   }
 }
