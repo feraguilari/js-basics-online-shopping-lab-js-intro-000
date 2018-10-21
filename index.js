@@ -32,7 +32,7 @@ function viewCart() {
     }
     else{
       var last = list.pop();
-      return `In your cart, you have ${list.join(", ")}, and ${lastItem}.`
+      return `In your cart, you have ${list.join(", ")}, and ${last}.`
     }
 }
 
